@@ -28,8 +28,10 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { useLocation } from "wouter";
 
 export default function Home() {
+  const [, setLocation] = useLocation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -60,13 +62,19 @@ export default function Home() {
           </motion.div>
           
           <div className="hidden md:flex gap-8">
-            {["about", "services", "portfolio", "team", "contact"].map((item) => (
+            {[
+              { label: "about", onClick: () => scrollToSection("about") },
+              { label: "services", onClick: () => setLocation("/services") },
+              { label: "portfolio", onClick: () => scrollToSection("portfolio") },
+              { label: "team", onClick: () => scrollToSection("team") },
+              { label: "contact", onClick: () => scrollToSection("contact") }
+            ].map((item) => (
               <button
-                key={item}
-                onClick={() => scrollToSection(item)}
+                key={item.label}
+                onClick={item.onClick}
                 className="text-muted-foreground hover:text-primary capitalize transition-colors duration-300"
               >
-                {item}
+                {item.label}
               </button>
             ))}
           </div>
