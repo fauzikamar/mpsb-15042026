@@ -65,7 +65,7 @@ export default function Home() {
             {[
               { label: "about", onClick: () => scrollToSection("about") },
               { label: "services", onClick: () => setLocation("/services") },
-              { label: "portfolio", onClick: () => scrollToSection("portfolio") },
+              { label: "projects", onClick: () => setLocation("/projects") },
               { label: "team", onClick: () => scrollToSection("team") },
               { label: "contact", onClick: () => scrollToSection("contact") }
             ].map((item) => (
