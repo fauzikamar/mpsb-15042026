@@ -12,6 +12,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
+import logoImg from "../../public/logo.png";
 import { 
   Zap,
   Wrench,
@@ -59,10 +60,9 @@ export default function Home() {
             className="flex items-center gap-2"
           >
             <img 
-              src="/logo.png" 
+              src={logoImg} 
               alt="MP Logo" 
               className="h-12 w-auto object-contain"
-              onError={(e) => { e.currentTarget.style.display = 'none'; }}
             />
             <span className="text-2xl font-bold gradient-text">MAGNITUDE POWER</span>
           </motion.div>
