@@ -56,9 +56,15 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-2xl font-bold gradient-text"
+            className="flex items-center gap-2"
           >
-            MAGNITUDE POWER
+            <img 
+              src="/logo.png" 
+              alt="MP Logo" 
+              className="h-12 w-auto object-contain"
+              onError={(e) => { e.currentTarget.style.display = 'none'; }}
+            />
+            <span className="text-2xl font-bold gradient-text">MAGNITUDE POWER</span>
           </motion.div>
           
           <div className="hidden md:flex gap-8">
