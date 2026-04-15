@@ -98,6 +98,12 @@ jspm_packages/
 
 # Temporary folders
 tmp/
+
+# Manus debug logs
+.manus-logs/
+
+# WebDev artifacts
+.webdev/artifacts/
 temp/
 
 # Database
